@@ -1,0 +1,46 @@
+<div class="contaomer main-container">
+    <h3>Interpolation</h3>
+
+    <p>O número de cliques é {{ contadorClick }}</p>
+
+    <br>
+
+    <button class="btn btn-info" [disabled]="contadorClick >= 10">Info</button>
+
+    <br>
+    <br>
+
+    <img [src]="urlImagem" width="50px" />
+
+    <br>
+    <hr />
+
+    <h3>Event Binding</h3>
+    <br>
+
+    <button class="btn btn-warning" (click)='Contador()'>Clique-me</button>&nbsp;
+    <button class="btn btn-danger" (click)='zerarContador()' [disabled]="contadorClick < 10">Zerar Contador</button>
+
+    <br>
+    <br>
+    <hr />
+
+    <h3>Two-way Binding</h3>
+    <br>
+
+    <!-- <input class="form-control" type="text" (keyup)='keyUp($event)' placeholder="Digite seu nome" />
+    <br>
+    <br>
+    <label>Seu Nome é {{ nome }}</label> -->
+
+    <!-- <input class="form-control" type="text" [ngModel]="nome" (ngModelChange)='nome = $event'
+        placeholder="Digite seu nome" />
+    <br>
+    <br>
+    <label>Seu Nome é <strong>{{ nome }}</strong></label> -->
+
+    <input class="form-control" type="text" [(ngModel)]="nome" placeholder="Digite seu nome" />
+    <br>
+    <br>
+    <label [ngClass]="nome">Seu Nome é <strong>{{ nome }}</strong></label>
+</div>
